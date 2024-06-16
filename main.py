@@ -5,8 +5,8 @@ from simulation import Simulation
 
 sim = Simulation()
 
-sim.create_canvas(10, 15)
-sim.add_walker(WalkerAnticlockwise())
+sim.create_canvas(30, 30)
+sim.add_walker(WalkerAnticlockwise(view_depth = 2))
 walker = sim.walker
 canvas = sim.canvas
 sim.visualize_canvas()

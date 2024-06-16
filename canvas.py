@@ -20,13 +20,13 @@ class Canvas:
         x = np.random.randint(0, self.n)
         y = np.random.randint(0, self.m)
         return x, y
-            
-    def get_position_info(self, position):
+
+    def get_position_info(self, position, view_depth):
         x , y = position
         values = []
-        for i in range(x - 1, x + 2):
+        for i in range(x - view_depth, x + 1 + view_depth):
             row_values = []
-            for j in range(y - 1, y + 2):
+            for j in range(y - view_depth, y + 1 + view_depth):
                 if 0 <= i < self.n and 0 <= j < self.m:
                     row_values.append(self.canvas[i, j])
                 else:
