@@ -96,6 +96,9 @@ class Walker:
         self.position = (x, y + 1)
         self.offset_y += 1
         self.update_relative_position()
+    def walk(self, position_info):
+        pass
+
 
 class WalkerAnticlockwise(Walker):
     def __init__(self, x=0, y=0, view_depth = 1):
